@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css?family=Adamina|Bebas+Neue&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/*NAV*/
+li,
+a,
+button {
+  font-family: "Adamina", sans-serif;
+  font-weight: 500;
+  font-size: 1.5em;
+  color: blue;
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1em;
+  height: 10vh;
+  background-color: white;
+}
+
+.logo {
+  cursor: pointer;
+  letter-spacing: 0.3em;
+}
+
+.navlinks {
+  list-style: none;
+}
+
+.navlinks li {
+  display: inline-block;
+  padding: 0px 20px;
+}
+
+.navlinks li a {
+  transition: all 0.3s ease 0s;
+  text-transform: lowercase;
+}
+
+.navlinks li a:hover {
+  color: aquamarine;
+}
+
+button {
+  padding: 9px 25px;
+  background-color: green;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+  font-family: "Bebas Neue";
+  color: white;
+  border-top-right-radius: 0.5em;
+}
+
+button:hover {
+  background-color: aquamarine;
+  color: black;
+}
+
+.logo {
+  font-family: "Bebas Neue";
+}
+
+/*STICKYNAVBARW3*/
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  margin: 0;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky + .content {
+  padding-top: 60px;
+}
+/*STICKYNAVBARW3*/
+
+/*HOMEPAGE*/
+
+.home {
+  padding: 1em;
+  padding-top: 10vh;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 40% 60%;
+}
+
+.sign {
+  background-repeat: no-repeat;
+  background-size: contain;
+  max-height: 100%;
+  border-bottom-left-radius: 1em;
+}
+
+.about {
+  display: grid;
+  font-family: "Bebas Neue";
+  font-size: 5em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+}
+/*HOMEPAGE*/
+
+/*MENU*/
+.fullmenu {
+  padding: 1em;
+  padding-top: 10vh;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.menu_display {
+  font-family: "Adamina", sans-serif;
+
+  align-items: center;
+  text-align: center;
+  display: grid;
+  font-size: 5em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.menu {
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.maindish {
+  grid-template-rows: 25% 25% 50%;
+}
+
+.maindish:hover {
+  cursor: pointer;
+}
+
+.maindish1,
+.maindish2,
+.maindish3 {
+  background-repeat: no-repeat;
+  height: 18em;
+  width: 20em;
+}
+
+.sidedish:hover {
+  cursor: pointer;
+}
+.sidedish1,
+.sidedish2,
+.sidedish3 {
+  background-repeat: no-repeat;
+  height: 18em;
+  width: 20em;
+}
+
+.itemtitle,
+.itemtitle2 {
+  font-family: "Bebas Neue";
+  text-align: center;
+  font-size: 3em;
+}
+/*MENU*/
+
+/*LOCATION*/
+
+.location {
+  padding: 1em;
+  padding-top: 10vh;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  justify-items: center;
+  font-family: "Adamina", sans-serif;
+}
+
+.map {
+  height: 40em;
+  width: 50em;
+}
+.location_title1 {
+  text-align: center;
+  font-size: 3em;
+}
+.location_title2 {
+  font-family: "Bebas Neue";
+
+  text-align: center;
+  font-size: 3em;
+}
+/*LOCATION*/
+
+/*FOOTER*/
+.footer {
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5vh;
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-family: "Adamina", sans-serif;
+  font-size: 2em;
+}
+/*FOOTER*/
