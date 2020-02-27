@@ -13,8 +13,7 @@ html {
 
 /*NAV*/
 li,
-a,
-button {
+a {
   font-family: "Adamina", sans-serif;
   font-weight: 500;
   font-size: 1.5em;
@@ -34,6 +33,7 @@ header {
 .logo {
   cursor: pointer;
   letter-spacing: 0.3em;
+  font-size: 2.5em;
 }
 
 .navlinks {
@@ -43,31 +43,17 @@ header {
 .navlinks li {
   display: inline-block;
   padding: 0px 20px;
+  text-align: center;
 }
 
-.navlinks li a {
+.navlinks li a i {
   transition: all 0.3s ease 0s;
   text-transform: lowercase;
 }
 
-.navlinks li a:hover {
+.navlinks li a i:hover {
   color: aquamarine;
-}
-
-button {
-  padding: 9px 25px;
-  background-color: green;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s ease 0s;
-  font-family: "Bebas Neue";
-  color: white;
-  border-top-right-radius: 0.5em;
-}
-
-button:hover {
-  background-color: aquamarine;
-  color: black;
+  border-bottom: solid aquamarine;
 }
 
 .logo {
@@ -88,6 +74,20 @@ button:hover {
 }
 /*STICKYNAVBARW3*/
 
+@media screen and (max-width: 430px) {
+  .navlinks li {
+    padding: 0px 5px;
+  }
+}
+@media screen and (max-width: 335px) {
+  .navlinks li a {
+    font-size: 1em;
+  }
+  .logo {
+    font-size: 2em;
+  }
+}
+
 /*HOMEPAGE*/
 
 .home {
@@ -102,7 +102,7 @@ button:hover {
   background-repeat: no-repeat;
   background-size: contain;
   max-height: 100%;
-  border-bottom-left-radius: 1em;
+  overflow: hidden;
 }
 
 .about {
@@ -115,6 +115,45 @@ button:hover {
   font-weight: 800;
   letter-spacing: 0.1em;
 }
+
+@media screen and (max-width: 1120px) {
+  .sign {
+    background-repeat: no-repeat;
+    max-height: 100%;
+    border-bottom-left-radius: 1em;
+  }
+
+  .about {
+    transition: ease-in-out;
+    background: aquamarine;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    font-weight: 600;
+    font-size: 4em;
+    border-bottom-left-radius: 1em;
+  }
+}
+@media screen and (max-width: 480px) {
+  .home {
+    padding: 1em;
+    padding-top: 10vh;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 10% 90%;
+  }
+  .sign {
+    background-repeat: no-repeat;
+    background-size: contain;
+    max-height: 100%;
+    overflow: hidden;
+  }
+
+  .about {
+    transition: ease-in-out;
+    background-image: url(./images/burgerfalling.gif);
+  }
+}
+
 /*HOMEPAGE*/
 
 /*MENU*/
@@ -126,7 +165,7 @@ button:hover {
   grid-template-columns: 60% 40%;
 }
 
-.menu_display {
+.menu-display {
   font-family: "Adamina", sans-serif;
 
   align-items: center;
@@ -136,6 +175,8 @@ button:hover {
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 15em;
+  width: 15em;
 }
 
 .menu {
@@ -147,7 +188,9 @@ button:hover {
   grid-template-rows: 25% 25% 50%;
 }
 
-.maindish:hover {
+.maindish1:hover,
+.maindish2:hover,
+.maindish3:hover {
   cursor: pointer;
 }
 
@@ -157,9 +200,14 @@ button:hover {
   background-repeat: no-repeat;
   height: 18em;
   width: 20em;
+  opacity: 0.7;
+
+  transition: opacity 0.3s ease ease-in-out;
 }
 
-.sidedish:hover {
+.sidedish1:hover,
+.sidedish2:hover,
+.sidedish3:hover {
   cursor: pointer;
 }
 .sidedish1,
@@ -168,14 +216,136 @@ button:hover {
   background-repeat: no-repeat;
   height: 18em;
   width: 20em;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
 }
 
 .itemtitle,
 .itemtitle2 {
   font-family: "Bebas Neue";
-  text-align: center;
+  text-align: left;
   font-size: 3em;
 }
+
+/*GALLERY FUNCTIONALITY*/
+img.maindish1 {
+  opacity: 1;
+}
+/*GALLERY FUNCTIONALITY*/
+
+@media screen and (max-width: 860px) {
+  .fullmenu {
+    padding: 1em;
+    padding-top: 10vh;
+    height: 100vh;
+  }
+
+  .menu-display {
+    height: 10em;
+    width: 10em;
+  }
+  .maindish1,
+  .maindish2,
+  .maindish3 {
+    height: 13em;
+    width: 13em;
+    background: none;
+  }
+
+  .sidedish1,
+  .sidedish2,
+  .sidedish3 {
+    height: 13em;
+    width: 13em;
+  }
+
+  .itemtitle,
+  .itemtitle2 {
+    font-family: "Bebas Neue";
+    text-align: left;
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 720px) {
+  .fullmenu {
+    padding: 1em;
+    padding-top: 10vh;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-content: center;
+  }
+
+  .menu-display {
+    height: 7em;
+    width: 7em;
+    display: grid;
+  }
+
+  .maindish1,
+  .maindish2,
+  .maindish3 {
+    height: 13em;
+    width: 13em;
+    background: none;
+    display: grid;
+  }
+
+  .sidedish1,
+  .sidedish2,
+  .sidedish3 {
+    height: 13em;
+    width: 13em;
+  }
+
+  .itemtitle,
+  .itemtitle2 {
+    font-family: "Bebas Neue";
+    text-align: left;
+    font-size: 2em;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .fullmenu {
+    padding: 1em;
+    padding-top: 10vh;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-content: center;
+  }
+
+  .menu-display {
+    height: 5em;
+    width: 5em;
+    display: grid;
+  }
+
+  .maindish1,
+  .maindish2,
+  .maindish3 {
+    height: 10em;
+    width: 10em;
+    background: none;
+    display: grid;
+  }
+
+  .sidedish1,
+  .sidedish2,
+  .sidedish3 {
+    height: 10em;
+    width: 10em;
+  }
+
+  .itemtitle,
+  .itemtitle2 {
+    font-family: "Bebas Neue";
+    text-align: left;
+    font-size: 1.7em;
+  }
+}
+
 /*MENU*/
 
 /*LOCATION*/
@@ -186,7 +356,7 @@ button:hover {
   height: 100vh;
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: auto;
+  grid-template-rows: 60% 40%;
   justify-items: center;
   font-family: "Adamina", sans-serif;
 }
@@ -194,7 +364,10 @@ button:hover {
 .map {
   height: 40em;
   width: 50em;
+  border-radius: 1em;
+  cursor: pointer;
 }
+
 .location_title1 {
   text-align: center;
   font-size: 3em;
@@ -204,6 +377,68 @@ button:hover {
 
   text-align: center;
   font-size: 3em;
+}
+
+@media screen and (max-width: 1000px) {
+  .location {
+    padding: 1em;
+    padding-top: 10vh;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50% 50%;
+    justify-items: center;
+    font-family: "Adamina", sans-serif;
+  }
+  .map {
+    height: 30em;
+    width: 40em;
+    border-radius: 1em;
+    cursor: pointer;
+    overflow: hidden;
+  }
+
+  .location_title1 {
+    text-align: center;
+    font-size: 2.5em;
+  }
+  .location_title2 {
+    font-family: "Bebas Neue";
+
+    text-align: center;
+    font-size: 2.5em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .location {
+    padding: 1em;
+    padding-top: 10vh;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 50% 50%;
+    justify-items: center;
+    font-family: "Adamina", sans-serif;
+  }
+  .map {
+    height: 30em;
+    width: 40em;
+    border-radius: 1em;
+    cursor: pointer;
+  }
+
+  .location_title1 {
+    padding-top: 1em;
+    text-align: center;
+    font-size: 2em;
+  }
+  .location_title2 {
+    font-family: "Bebas Neue";
+
+    text-align: center;
+    font-size: 2em;
+  }
 }
 /*LOCATION*/
 
@@ -217,6 +452,6 @@ button:hover {
   color: white;
   text-align: center;
   font-family: "Adamina", sans-serif;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 /*FOOTER*/
